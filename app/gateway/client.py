@@ -11,7 +11,7 @@ from app.config import settings
 #   - Retry: 2 attempts on rate limit / server error before triggering the fallback target
 GATEWAY_CONFIG = {
     "strategy": {"mode": "fallback"},
-    "cache": {"mode": "simple"},
+    "cache": {"mode": "simple"}, 
     "retry": {
         "attempts": 2,
         "on_status_codes": [429, 503]

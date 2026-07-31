@@ -12,7 +12,8 @@ def planner_node(state: AgentState):
     # Get the conversation history (excluding the latest message)
     history = ""
     for msg in state["messages"][:-1]:
-        role = "User" if msg["role"] == "user" else "Assistant"
+        role = "User" if msg["role"] == "user" else "0"
+        ""   
         history += f"{role}: {msg['content']}\n"
     
     user_message = state["messages"][-1]["content"] if state["messages"] else ""
